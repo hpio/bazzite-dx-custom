@@ -23,6 +23,14 @@ modules:
     install:
       - starship
 
+  - type: rpm-ostree
+    repos:
+      - https://repo.librewolf.net/librewolf.repo
+    keys: 
+      - https://keys.openpgp.org/vks/v1/by-fingerprint/034F7776EF5E0C613D2F7934D29FBD5F93C0CFC3
+    install:
+      - librewolf
+
   - type: bling
     install:
       - 1password
@@ -32,7 +40,6 @@ modules:
       - notify: true
         scope: system
         install:
-          - io.gitlab.librewolf-community
           - com.discordapp.Discord
         remove:
           - org.kde.okular

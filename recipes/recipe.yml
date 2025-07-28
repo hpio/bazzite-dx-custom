@@ -28,14 +28,16 @@ modules:
       - 1password
 
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
-    system:
-      # If no repo information is specified, Flathub will be used by default
-      install:
-        - io.gitlab.librewolf-community
-        - com.discordapp.Discord
-      remove:
-        - org.gnome.eog
+    configuration:
+      - notify: true
+        scope: system
+        install:
+          - io.gitlab.librewolf-community
+          - com.discordapp.Discord
+        remove:
+          - org.kde.okular
+          - org.kde.kcalc
+          - org.kde.haruna
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
